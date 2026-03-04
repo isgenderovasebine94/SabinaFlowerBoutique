@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\basket.html" />
+    <None Include="wwwroot\bouquets.html" />
+    <None Include="wwwroot\bridal.html" />
+    <None Include="wwwroot\compositions.html" />
+    <None Include="wwwroot\contact.html" />
+    <None Include="wwwroot\css\style.css" />
+    <None Include="wwwroot\images\Ağ və çəhrayı pionlar.jpg" />
+    <None Include="wwwroot\images\Buketlər.jpg" />
+    <None Include="wwwroot\images\category-bridal.jpg" />
+    <None Include="wwwroot\images\gelinpionbuketi.jpg" />
+    <None Include="wwwroot\images\Günəbaxan.jpg" />
+    <None Include="wwwroot\images\Gəlin buketi.jpg" />
+    <None Include="wwwroot\images\hero-flowers.jpg" />
+    <None Include="wwwroot\images\Kompozisiyalar.jpg" />
+    <None Include="wwwroot\images\Lalələr.jpg" />
+    <None Include="wwwroot\images\Lavanda və zərif vaza kompozisiyası.jpg" />
+    <None Include="wwwroot\images\Lavanda.jpg" />
+    <None Include="wwwroot\images\Orkide.jpg" />
+    <None Include="wwwroot\images\orkideler.jpg" />
+    <None Include="wwwroot\images\papatyalarbuketi.jpg" />
+    <None Include="wwwroot\images\rengberengpapatyalar.jpg" />
+    <None Include="wwwroot\images\Çəhrayı romantik güllər.jpg" />
+    <None Include="wwwroot\index.html" />
+    <None Include="wwwroot\js\app.js" />
+    <None Include="wwwroot\js\data.js" />
+    <None Include="wwwroot\js\i18n.js" />
+    <None Include="wwwroot\login.html" />
+    <None Include="wwwroot\product.html" />
+    <None Include="wwwroot\wishlist.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+</Project>

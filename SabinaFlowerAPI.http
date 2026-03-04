@@ -1,0 +1,6 @@
+@SabinaFlowerAPI_HostAddress = http://localhost:5081
+
+GET {{SabinaFlowerAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
