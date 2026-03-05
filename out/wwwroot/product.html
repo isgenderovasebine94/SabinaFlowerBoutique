@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Məhsul - Sabina Flower Boutique</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/data.js"></script>
+  <script src="/js/app.js"></script>
+  <script>
+    function renderPage() {
+      const params = new URLSearchParams(window.location.search);
+      const id = parseInt(params.get('id'));
+      const product = getProductById(id);
+
+      if (!product) {
+        document.getElementById('app').innerHTML = `${renderHeader()}<div class="empty-state"><p>Product not found</p><a href="bouquets.html" class="btn-primary">${t('basket.continueShopping')}</a></div>${renderFooter()}`;
+        updateBadges(); return;
+      }
+
+      const inWish = isInWishlist(product.id);
+      const related = products.filter(p => p.categoryId === product.categoryId && p.id !== product.id).slice(0, 4);
+
+      document.getElementById('app').innerHTML = `
+        ${renderHeader()}
+        <div class="page-section">
+          <div class="container">
+            <a href="javascript:history.back()" class="back-link">${icons.arrowLeft} ${t('basket.continueShopping')}</a>
+            <div class="product-detail">
+              <div class="product-detail-img"><img src="${product.imageUrl}" alt="${product.name[currentLang]}"></div>
+              <div>
+                <h1>${product.name[currentLang]}</h1>
+                <p class="price">${product.price} ${t('currency')}</p>
+                <p class="desc">${product.description[currentLang]}</p>
+                <div class="product-detail-actions">
+                  <button class="btn-primary" style="flex:1" onclick="addToBasket(${product.id})">
+                    ${icons.bag} ${t('product.addToCart')}
+                  </button>
+                  <button class="btn-wish ${inWish?'active':''}" onclick="toggleWishlist(${product.id});renderPage();">
+                    ${inWish ? icons.heartFill.replace('16','18') : icons.heart.replace('16','18')}
+                  </button>
+                </div>
+              </div>
+            </div>
+            ${related.length > 0 ? `
+              <div class="mt-20">
+                <h2 class="section-title" style="text-align:left">${t('home.featured')}</h2>
+                <div class="products-grid">${related.map(p => renderProductCard(p)).join('')}</div>
+              </div>
+            ` : ''}
+          </div>
+        </div>
+        ${renderFooter()}
+      `;
+      updateBadges();
+      document.title = product.name[currentLang] + ' - Sabina Flower Boutique';
+    }
+    renderPage();
+  </script>
+</body>
+</html>
