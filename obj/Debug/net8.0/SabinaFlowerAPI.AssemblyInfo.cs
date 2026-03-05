@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SabinaFlowerAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9239ea371733148c98130786c6e3ad7a4019770")]
 [assembly: System.Reflection.AssemblyProductAttribute("SabinaFlowerAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SabinaFlowerAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
