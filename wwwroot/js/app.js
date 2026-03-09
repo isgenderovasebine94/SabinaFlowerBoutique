@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', initPage);
 function completeOrder() {
   const basket = getBasket();
   const token = localStorage.getItem('sabina-token');
-  const API_BASE = window.location.origin + "/api";
+  const API_BASE = "https://sabinaflowerboutique-production.up.railway.app/api";
 
   if (!token) {
     showToast('Zəhmət olmasa əvvəl login olun');
