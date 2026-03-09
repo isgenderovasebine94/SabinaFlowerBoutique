@@ -60,7 +60,7 @@
     function handleAuth() {
       const email = document.getElementById('auth-email').value;
       const password = document.getElementById('auth-password').value;
-      const API_BASE = 'https://localhost:7268/api';
+      const API_BASE = "https://sabinaflowerboutique-production.up.railway.app/api";
 
       if (authMode === 'login') {
         fetch(API_BASE + '/auth/login', {
