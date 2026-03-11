@@ -29,6 +29,12 @@ if (!string.IsNullOrEmpty(connectionString))
 
     connectionString = npgsqlBuilder.ToString();
 }
+else
+{
+    
+    connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+}
+
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString));
